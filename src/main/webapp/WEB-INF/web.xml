@@ -18,10 +18,18 @@
   	<servlet-name>remote</servlet-name>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
   	<servlet-name>remote</servlet-name>
   	<url-pattern>/remote/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>PostDataServlet</servlet-name>
+  	<servlet-class>com.qijiabin.serializable.PostDataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>PostDataServlet</servlet-name>
+  	<url-pattern>/*</url-pattern>
   </servlet-mapping>
   
 </web-app>
