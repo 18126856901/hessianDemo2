@@ -24,9 +24,9 @@ import com.caucho.hessian.io.Hessian2Output;
  * ========================================================
  * 修订日期     修订人    描述
  */
+@SuppressWarnings("serial")
 public class PostDataServlet extends HttpServlet {
 
-	private static final long serialVersionUID = -4461061053732328507L;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -63,7 +63,7 @@ public class PostDataServlet extends HttpServlet {
 
 	}
 
-	public static Person getPerson() {
+	private static Person getPerson() {
 		Person person = new Person();
 		person.setAddress(new String[] { "ShangHai", "ShenZhen", "ChengDu" });
 		person.setBrithday(new Date());
@@ -75,4 +75,6 @@ public class PostDataServlet extends HttpServlet {
 		person.setWeight(55.2F);
 		return person;
 	}
+	
 }
+
